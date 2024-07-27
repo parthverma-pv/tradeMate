@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body, p {
+    font-family: 'Inter', sans-serif !important;
+}
+th{
+    display: none;
+}
+.main .block-container {
+    max-width: 80%;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.stock-card .row1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+}
+
+.stock-card .row2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    position: relative;
+}
+
+.stock-card .row2 .profit-loss {
+    float: right;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.stock-card .row2 .profit-loss.positive {
+    color: green;
+}
+
+.stock-card .row2 .profit-loss.negative {
+    color: red;
+}
+
+.stock-card .row3 {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+    position: relative;
+}
+
+.stock-card .row3 .ltp {
+    float: right;
+    font-size: 12px;
+}
+
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
