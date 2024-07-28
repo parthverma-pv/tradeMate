@@ -69,7 +69,6 @@ def search():
     ticker =""
     if name:
         ticker = (df[df['name']==name].id).to_string(index=False).strip()
-        st.write(ticker)
     if ticker:
         stock_name, price = get_stock_details(ticker)
         if price:
@@ -112,7 +111,7 @@ def search():
                     st.write(f"Order submitted: {quantity} shares of {ticker} at ₹ {price:.2f}")
                 else:
                     st.error("You need to log in to submit an order.")
-        st_autorefresh(5000, key="price_refresh")
+            # st_autorefresh(5000, key="price_refresh")
     
 
 
