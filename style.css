@@ -6,6 +6,10 @@ body, p {
 th{
     display: none;
 }
+
+button{
+    width: 100%;
+}
 .main .block-container {
     max-width: 80%;
     padding-top: 1rem;
