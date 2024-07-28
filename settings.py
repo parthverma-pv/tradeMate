@@ -26,10 +26,15 @@ def settings():
     st.subheader("Account Balance")
     balance = get_balance(st.session_state.username)
     st.write(f"Current Balance:  ₹ {balance:.2f}")
-    amount = st.number_input("Add Money to account:", min_value=0.0, step=100.0, format="%f")
 
-    if st.button("Add to Account", use_container_width=True):
-        set_balance(st.session_state.username, get_balance(st.session_state.username) + amount)
+    with st.form(key='add_money_form'):
+        amount = st.number_input("Add Money to account:", min_value=0.0, step=1000.0, format="%f")
+        submit_button = st.form_submit_button(label='Add to Account',use_container_width=True)
+
+    if submit_button:
+        new_balance = get_balance(st.session_state.username) + amount
+        set_balance(st.session_state.username, new_balance)
         st.success("Money successfully added to account.")
-        time.sleep(1)
+        time.sleep(2)
+        st.rerun()
         
