@@ -32,5 +32,4 @@ def settings():
         set_balance(st.session_state.username, get_balance(st.session_state.username) + amount)
         st.success("Money successfully added to account.")
         time.sleep(1)
-        st.rerun()
         
