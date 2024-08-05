@@ -106,9 +106,8 @@ def search():
                     type = "sell"
                     user_id = get_user_id(st.session_state.username)
                     set_balance(st.session_state.username,balance+quantity*price)
-                    update_portfolio(user_id, ticker, quantity, price, type)
+                    update_portfolio(user_id, stock_name, ticker, quantity, price, type)
                     update_transactions(user_id, ticker, quantity, price, type)
-                    st.write(f"Order submitted: {quantity} shares of {ticker} at ₹ {price:.2f}")
                 else:
                     st.error("You need to log in to submit an order.")
             # st_autorefresh(5000, key="price_refresh")
